@@ -1,0 +1,72 @@
+
+<script>
+$(document).ready(function(e) {
+    $("#btnCompare").click(function(e) {
+       var getFirst = $("#first_products").val();
+	   var getSecond = $("#second_products").val();
+	  	if(getFirst == "LG" && getSecond =="Nokia")
+		{
+			$("#productscom").show({display: 'block'},3000);
+			$("#First").text("LG Mobile");
+			$("#Second").text("Nokia  Mobile");
+		}
+		
+		if(getFirst == "Oppo" && getSecond =="LG")
+		{
+			$("#productscom").show({display: 'block'},3000);
+			$("#First").text("Oppo Mobile");
+			$("#Second").text("LG  Mobile");
+		}
+	   
+	   
+    });
+});
+</script>
+
+
+
+
+
+<div class="container well">
+	<h2 style="text-align:center;">Products Comperesion</h2>
+    <hr>
+  
+  <table class="table table-responsive table-bordered">
+  	<tr>
+    	<td>Select Mobile</td>
+        <td>
+        	<select class="form-control" id="first_products">
+            	<option value="LG">LG</option>
+                <option value="Oppo">Oppo</option>
+                 <option value="Nokia">Nokia</option>
+            </select>
+        </td>
+        
+        <td>Select Mobile</td>
+        <td>
+        	<select class="form-control" id="second_products">
+            	<option value="LG">LG</option>
+                <option value="Oppo">Oppo</option>
+                 <option value="Nokia">Nokia</option>
+            </select>
+        </td>
+        <td>
+        	<button class="btn btn-success" id="btnCompare">Compare</button>
+        </td>
+    </tr>
+  </table>
+  
+  
+  <div class="container well">
+  	<div class="row" id="productscom" style="display:none;">
+    	<div class="col-md-6" id="First">
+        	<img src="OPPO A7.jpg">
+        </div>
+        
+        <div class="col-md-6" id="Second">
+        	<img src="nokia-7-plus.jpg">
+        </div>
+    </div>
+  </div>
+    
+</div>
